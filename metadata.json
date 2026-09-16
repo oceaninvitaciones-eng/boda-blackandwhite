@@ -1,0 +1,6 @@
+{
+  "name": "Invitación de Boda Elegante",
+  "description": "Invitación de boda web interactiva en blanco y negro con animaciones, cuenta regresiva, itinerario, ubicaciones y galería personalizable.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

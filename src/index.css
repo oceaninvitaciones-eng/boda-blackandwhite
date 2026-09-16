@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif-wedding {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-sans-wedding {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+  .font-script-wedding {
+    font-family: 'Pinyon Script', cursive;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}

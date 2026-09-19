@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black text-neutral-100 font-sans-wedding selection:bg-neutral-800 selection:text-white overflow-x-hidden w-full relative">
       {/* Floating Ambient Music Player */}
-      <AudioPlayer />
+      <AudioPlayer music={weddingData.music} />
 
       {/* Floating Mobile Quick Access Bar */}
       <MobileQuickBar />

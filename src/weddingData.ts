@@ -9,6 +9,7 @@ import photoshootStaircase from './assets/images/photoshoot_staircase_bw_1789517
 import photoshootEmbrace from './assets/images/photoshoot_embrace_bw_1789517761100.jpg';
 import churchPhoto from './assets/images/church_ceremony_bw_1789517584503.jpg';
 import receptionPhoto from './assets/images/hacienda_reception_bw_1789517596720.jpg';
+import weddingSong from './assets/audio/wedding_song.mp3';
 
 /* =========================================================================
    GUÍA RÁPIDA DE PERSONALIZACIÓN:
@@ -247,5 +248,12 @@ export const weddingData: WeddingConfig = {
     whatsappNumber: '525512345678',
     whatsappDefaultMessage: '¡Hola! Confirmo mi asistencia a la boda de Santiago y Valentina.',
     customNotes: 'Agradecemos confirmar antes de la fecha límite para asegurar tu lugar en la recepción.',
+  },
+
+  // 12. MÚSICA AMBIENTAL DE FONDO
+  music: {
+    title: 'A Thousand Years',
+    artist: 'Piano Instrumental',
+    url: weddingSong,
   },
 };

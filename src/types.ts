@@ -115,4 +115,9 @@ export interface WeddingConfig {
   dressCode: DressCode;
   giftRegistry: GiftRegistry;
   rsvp: RSVPConfig;
+  music?: {
+    title: string;
+    artist: string;
+    url: string;
+  };
 }

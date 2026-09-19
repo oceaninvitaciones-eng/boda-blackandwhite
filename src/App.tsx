@@ -11,15 +11,11 @@ import { GiftsRegistry } from './components/GiftsRegistry';
 import { RSVPSection } from './components/RSVPSection';
 import { Footer } from './components/Footer';
 import { AudioPlayer } from './components/AudioPlayer';
-import { CodeGuideModal } from './components/CodeGuideModal';
 import { MobileQuickBar } from './components/MobileQuickBar';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-black text-neutral-100 font-sans-wedding selection:bg-neutral-800 selection:text-white overflow-x-hidden w-full relative">
-      {/* Editorial Navigation / Helper buttons */}
-      <CodeGuideModal />
-
       {/* Floating Ambient Music Player */}
       <AudioPlayer />
 

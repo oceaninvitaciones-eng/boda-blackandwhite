@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, Clock, Camera, Send } from 'lucide-react';
+import { MapPin, Clock, Send } from 'lucide-react';
 
 export const MobileQuickBar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,48 +34,42 @@ export const MobileQuickBar: React.FC = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 80, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="sm:hidden fixed bottom-4 left-4 right-18 z-40 bg-neutral-950/90 backdrop-blur-md border border-neutral-800 rounded-full px-3 py-2 shadow-2xl flex items-center justify-around"
-          aria-label="Acceso rápido móvil"
+          className="fixed bottom-4 sm:bottom-6 left-4 right-18 sm:left-1/2 sm:-translate-x-1/2 sm:right-auto z-40 bg-neutral-950/90 backdrop-blur-md border border-neutral-800 rounded-full px-3.5 sm:px-5 py-1.5 shadow-2xl flex items-center justify-between sm:justify-center sm:gap-6"
+          aria-label="Acceso rápido"
         >
+          {/* 1. Lugar */}
           <button
             onClick={() => scrollTo('ubicaciones-section')}
-            className="flex flex-col items-center gap-0.5 text-neutral-300 hover:text-white transition-colors cursor-pointer py-1 px-2"
+            className="flex flex-col items-center justify-center gap-0.5 text-neutral-300 hover:text-white transition-colors cursor-pointer py-1 px-3 min-h-[44px] min-w-[56px]"
           >
-            <MapPin className="w-3.5 h-3.5 text-neutral-300" />
-            <span className="font-sans-wedding text-[9px] tracking-wider uppercase">Lugar</span>
+            <MapPin className="w-4 h-4 text-neutral-300" />
+            <span className="font-sans-wedding text-[9px] tracking-wider uppercase font-medium">Lugar</span>
           </button>
 
-          <div className="w-px h-4 bg-neutral-800" />
+          <div className="w-px h-5 bg-neutral-800" />
 
+          {/* 2. Horario */}
           <button
             onClick={() => scrollTo('itinerario-section')}
-            className="flex flex-col items-center gap-0.5 text-neutral-300 hover:text-white transition-colors cursor-pointer py-1 px-2"
+            className="flex flex-col items-center justify-center gap-0.5 text-neutral-300 hover:text-white transition-colors cursor-pointer py-1 px-3 min-h-[44px] min-w-[56px]"
           >
-            <Clock className="w-3.5 h-3.5 text-neutral-300" />
-            <span className="font-sans-wedding text-[9px] tracking-wider uppercase">Horario</span>
+            <Clock className="w-4 h-4 text-neutral-300" />
+            <span className="font-sans-wedding text-[9px] tracking-wider uppercase font-medium">Horario</span>
           </button>
 
-          <div className="w-px h-4 bg-neutral-800" />
+          <div className="w-px h-5 bg-neutral-800" />
 
-          <button
-            onClick={() => scrollTo('galeria-section')}
-            className="flex flex-col items-center gap-0.5 text-neutral-300 hover:text-white transition-colors cursor-pointer py-1 px-2"
-          >
-            <Camera className="w-3.5 h-3.5 text-neutral-300" />
-            <span className="font-sans-wedding text-[9px] tracking-wider uppercase">Fotos</span>
-          </button>
-
-          <div className="w-px h-4 bg-neutral-800" />
-
+          {/* 3. Confirmar */}
           <button
             onClick={() => scrollTo('rsvp-section')}
-            className="flex flex-col items-center gap-0.5 text-white hover:text-white transition-colors cursor-pointer py-1 px-2 font-medium"
+            className="flex flex-col items-center justify-center gap-0.5 text-white hover:text-neutral-200 transition-colors cursor-pointer py-1 px-3 min-h-[44px] min-w-[56px]"
           >
-            <Send className="w-3.5 h-3.5 text-white" />
-            <span className="font-sans-wedding text-[9px] tracking-wider uppercase font-semibold">RSVP</span>
+            <Send className="w-4 h-4 text-white" />
+            <span className="font-sans-wedding text-[9px] tracking-wider uppercase font-semibold">Confirmar</span>
           </button>
         </motion.nav>
       )}
     </AnimatePresence>
   );
 };
+
